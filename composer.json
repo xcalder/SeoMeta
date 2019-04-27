@@ -12,7 +12,7 @@
 	            "Xcalder\\SeoMeta\\SeoMetaServiceProvider"
 	        ],
 	        "aliases": {
-	            "SeoMeta": "Xcalder\\SeoMeta\\Facade"
+	            "SeoMeta": "Xcalder\\SeoMeta\\Facades\\SeoMeta"
 	        }
 	    }
 	}
