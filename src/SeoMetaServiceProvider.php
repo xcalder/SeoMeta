@@ -1,46 +1,30 @@
 <?php
 
-namespace Xcalder\SeoMeta;
+/*
+ * psr2
+ */
+
+namespace Xcalder\Xunsearch;
 
 use Illuminate\Support\ServiceProvider;
-use SeoMeta\Factory;
 
 class SeoMetaServiceProvider extends ServiceProvider
 {
-    /**
-     * Perform post-registration booting of services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-
-    }
-    
     /**
      * Indicates if loading of the provider is deferred.
      *
      * @var bool
      */
     protected $defer = true;
-    
-    /*
-    public function boot()
-    {
-        $this->loadMigrationsFrom(__DIR__.'/../migrate');
-    }
-    */
 
     /**
-     * Register the service provider.
+     * Bootstrap the application services.
      *
      * @return void
      */
     public function register()
     {
-        $this->app->singleton(Factory::class, function ($app) {
-            return new SeoMetaManager($app);
-        });
+        
     }
 
     /**
@@ -50,6 +34,6 @@ class SeoMetaServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [Factory::class];
+        return [];
     }
 }
