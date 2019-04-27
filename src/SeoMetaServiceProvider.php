@@ -13,8 +13,8 @@ class SeoMetaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(SeoMeta::class, function () {
-            return new SeoMeta();
+        $this->app->singleton(SeoMeta::class, function ($app) {
+            return new SeoMeta($app);
         });
     }
 }

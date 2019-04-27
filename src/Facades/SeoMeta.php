@@ -2,6 +2,7 @@
 
 namespace Xcalder\SeoMeta\Facades;
 
+use Xcalder\SeoMeta\SeoMeta as Manager;
 use Illuminate\Support\Facades\Facade;
 
 class SeoMeta extends Facade
@@ -13,6 +14,6 @@ class SeoMeta extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'SeoMeta';
+        return Manager::class;
     }
 }
