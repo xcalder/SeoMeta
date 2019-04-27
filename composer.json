@@ -9,7 +9,7 @@
     "extra": {
 	    "laravel": {
 	        "providers": [
-	            "Xcalder\\SeoMeta\\ServiceProvider"
+	            "Xcalder\\SeoMeta\\SeoMetaServiceProvider"
 	        ],
 	        "aliases": {
 	            "SeoMeta": "Xcalder\\SeoMeta\\Facade"
