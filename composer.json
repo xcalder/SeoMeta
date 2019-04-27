@@ -1,0 +1,19 @@
+{
+    "name"  : "xcalder/SeoMeta",
+    "type"  : "library",
+    "homepage": "https://teaarthub.com",
+    "license" : "MIT",
+    "autoload": {
+        "psr-4": {"Xcalder\\SeoMeta\\": "src/"}
+    },
+    "extra": {
+	    "laravel": {
+	        "providers": [
+	            "Xcalder\\SeoMeta\\ServiceProvider"
+	        ],
+	        "aliases": {
+	            "SeoMeta": "Xcalder\\SeoMeta\\Facade"
+	        }
+	    }
+	}
+}
