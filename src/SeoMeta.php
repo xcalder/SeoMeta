@@ -34,6 +34,9 @@ class SeoMeta
     }
     
     public function setTitle($title) {
+        if(is_array($title)){
+            $title = implode(',', $title);
+        }
         $this->title = $title . '-' . config('app.name');
     }
     
@@ -48,7 +51,7 @@ class SeoMeta
         $html = '';
         
         if(!empty($this->title)){
-            $html .= '<title>'.$this->title.'</title>';
+            $html .= '<title>'.Str::limit($this->title, 150).'</title>';
         }
         if(!empty($this->meta)){
             foreach($this->meta as $key=>$meta){
